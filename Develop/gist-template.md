@@ -36,6 +36,10 @@ Anchors in regular expressions are used to specify positions in the input string
 ### Bracket Expressions
 
 ### Character Classes
+- John\sDoe: Character Classes - Literal characters "John" followed by whitespace \s and then "Doe".
+- (/^John\sDoe\s(?:\(\d{3}\)\s\d{3}-\d{4}|\d{3}-\d{3}-\d{4})$/m)
+
+Character classes represent sets of characters that can match at a particular position in the text. In this regex, \d represents any digit (equivalent to [0-9]), and \s represents any whitespace character (space, tab, newline). These character classes allow for matching of specific types of characters, such as digits for the phone number and whitespace for separating parts of the name. Character classes provide a concise way to specify a range of characters that can match at a given position, enhancing the flexibility and accuracy of regular expressions.
 
 ### The OR Operator
 
