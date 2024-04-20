@@ -36,13 +36,17 @@ Anchors in regular expressions are used to specify positions in the input string
 Quantifiers specify the number of occurrences of the preceding element in the regex pattern. In this expression, quantifiers are used to specify the exact number of digits expected in the phone number: \d{3} for three digits and \d{4} for four digits. These quantifiers ensure that the area code and phone number parts have the correct length. Quantifiers help make regular expressions more flexible and concise by allowing repetition of patterns without needing to specify each character individually.
 
 ### Grouping Constructs
+- (?: ... ): Grouping Constructs - Non-capturing group for the phone number pattern.
+- (/^John\sDoe\s(?:\(\d{3}\)\s\d{3}-\d{4}|\d{3}-\d{3}-\d{4})$/m)
+
+ Grouping constructs, denoted by parentheses (...), are used to group elements of a regular expression together. In this regex, (?: ... ) is a non-capturing group, used to group alternative phone number patterns without capturing the match. This ensures that the entire phone number pattern is treated as a single unit for the OR operator. Grouping constructs are essential for organizing complex regex patterns, improving readability, and applying operators to multiple elements simultaneously.
 
 ### Bracket Expressions
 
 ### Character Classes
 - John\sDoe: Character Classes - Literal characters "John" followed by whitespace \s and then "Doe".
 - (/^John\sDoe\s(?:\(\d{3}\)\s\d{3}-\d{4}|\d{3}-\d{3}-\d{4})$/m)
-
+-
 Character classes, denoted by \, represent sets of characters that can match at a particular position in the text. In this regex, \d represents any digit (equivalent to [0-9]), matching numerical digits in the input text. It's crucial for matching the numerical parts of the phone number. Similarly, \s represents any whitespace character (space, tab, newline), enabling matching of spaces between the name components "John" and "Doe". By using character classes, the regex becomes more versatile, allowing for precise matching of specific types of characters at designated positions within the text.
 
 ### The OR Operator
@@ -69,6 +73,7 @@ Here's how character escapes are used in the regex pattern:
 \( and \) are used to escape the opening and closing parentheses, respectively. In regular expressions, parentheses are metacharacters with special meanings (used for grouping and capturing). By escaping them with a backslash, \( and \) match the literal opening and closing parentheses in the input text.
 Similarly, \d is a character escape representing any digit (equivalent to the character class [0-9]). It matches numerical digits in the input text. In the regex pattern, \d{3} is used to match exactly three digits, ensuring accurate matching of the area code in the phone number.
 \s is another character escape representing any whitespace character (space, tab, newline). It matches whitespace characters in the input text. In the regex pattern, \s is used to match the whitespace between the name components "John" and "Doe", ensuring flexibility in handling variations in whitespace.
+
 ## Author
 
 A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
