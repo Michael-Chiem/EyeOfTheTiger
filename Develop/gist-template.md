@@ -23,8 +23,9 @@ This regex pattern begins by anchoring the search at the start and end of each l
 ## Regex Components
 
 ### Anchors
-Testing
-
+- "^: Anchor - Start of the line anchor" 
+- "$: Anchor - End of the line anchor"
+- /<span style="color:red;">^</span>John\sDoe\s(?:\(\d{3}\)\s\d{3}-\d{4}|\d{3}-\d{3}-\d{4})<span style="color:red;">$</span>/m
 ### Quantifiers
 
 ### Grouping Constructs
