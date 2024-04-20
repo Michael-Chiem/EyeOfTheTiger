@@ -48,6 +48,11 @@ Character classes, denoted by \, represent sets of characters that can match at 
 The OR operator, represented by |, provides flexibility in matching alternative patterns within the regex. In this expression, the OR operator separates two alternative phone number patterns within the non-capturing group. One pattern matches phone numbers in the format (123) 456-7890, while the other matches numbers in the format 123-456-7890. The OR operator expands the regex's capability to handle different phone number formats, accommodating variations in the input text. By incorporating the OR operator, the regex becomes more adaptable, capable of capturing diverse phone number patterns encountered in real-world data.
 
 ### Flags
+- (/^John\sDoe\s(?:\(\d{3}\)\s\d{3}-\d{4}|\d{3}-\d{3}-\d{4})$/m)
+
+/m is added after the closing delimiter to indicate the multiline flag. This flag modifies the behavior of anchors (^ and $), allowing them to match the start and end of each line within the input text, rather than just the start and end of the entire string. This is particularly useful when dealing with multiline text where each line represents a separate data entry.
+
+With the multiline flag added, the regex pattern now ensures that "John Doe" followed by a valid phone number is matched at the beginning of each line within the input text, facilitating accurate extraction of desired information from multiline data sources.
 
 ### Character Escapes
 
