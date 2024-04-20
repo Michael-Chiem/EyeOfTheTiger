@@ -30,6 +30,10 @@ This regex pattern begins by anchoring the search at the start and end of each l
 Anchors in regular expressions are used to specify positions in the input string. In this regex, the caret <span style="color:red;">^</span> is an anchor that asserts the start of the line. It ensures that the pattern "John Doe" must occur at the beginning of a line. Similarly, the dollar sign <span style="color:red;">$</span> is another anchor used at the end of the regex, asserting the end of the line. It ensures that the phone number pattern must occur at the end of the line. Anchors are crucial for enforcing specific positions within the input text, providing context for where matches should occur.
 
 ### Quantifiers
+- \d{3}-\d{3}-\d{4}: Quantifiers - Matches phone numbers in the format 123-456-7890.
+- (/^John\sDoe\s(?:\(\d{3}\)\s\d{3}-\d{4}|\d{3}-\d{3}-\d{4})$/m)
+
+Quantifiers specify the number of occurrences of the preceding element in the regex pattern. In this expression, quantifiers are used to specify the exact number of digits expected in the phone number: \d{3} for three digits and \d{4} for four digits. These quantifiers ensure that the area code and phone number parts have the correct length. Quantifiers help make regular expressions more flexible and concise by allowing repetition of patterns without needing to specify each character individually.
 
 ### Grouping Constructs
 
