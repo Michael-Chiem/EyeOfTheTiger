@@ -26,6 +26,9 @@ This regex pattern begins by anchoring the search at the start and end of each l
 - "^: Anchor - Start of the line anchor" 
 - "$: Anchor - End of the line anchor"
 - /<span style="color:red;">^</span>John\sDoe\s(?:\(\d{3}\)\s\d{3}-\d{4}|\d{3}-\d{3}-\d{4})<span style="color:red;">$</span>/m
+
+Anchors in regular expressions are used to specify positions in the input string. In this regex, the caret <span style="color:red;">^</span> is an anchor that asserts the start of the line. It ensures that the pattern "John Doe" must occur at the beginning of a line. Similarly, the dollar sign <span style="color:red;">$</span> is another anchor used at the end of the regex, asserting the end of the line. It ensures that the phone number pattern must occur at the end of the line. Anchors are crucial for enforcing specific positions within the input text, providing context for where matches should occur.
+
 ### Quantifiers
 
 ### Grouping Constructs
