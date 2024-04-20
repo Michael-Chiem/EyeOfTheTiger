@@ -42,6 +42,10 @@ Anchors in regular expressions are used to specify positions in the input string
 Character classes, denoted by \, represent sets of characters that can match at a particular position in the text. In this regex, \d represents any digit (equivalent to [0-9]), matching numerical digits in the input text. It's crucial for matching the numerical parts of the phone number. Similarly, \s represents any whitespace character (space, tab, newline), enabling matching of spaces between the name components "John" and "Doe". By using character classes, the regex becomes more versatile, allowing for precise matching of specific types of characters at designated positions within the text.
 
 ### The OR Operator
+- |: OR Operator - Separates alternative patterns within the non-capturing group.
+- (/^John\sDoe\s(?:\(\d{3}\)\s\d{3}-\d{4}|\d{3}-\d{3}-\d{4})$/m)
+
+The OR operator, represented by |, provides flexibility in matching alternative patterns within the regex. In this expression, the OR operator separates two alternative phone number patterns within the non-capturing group. One pattern matches phone numbers in the format (123) 456-7890, while the other matches numbers in the format 123-456-7890. The OR operator expands the regex's capability to handle different phone number formats, accommodating variations in the input text. By incorporating the OR operator, the regex becomes more adaptable, capable of capturing diverse phone number patterns encountered in real-world data.
 
 ### Flags
 
