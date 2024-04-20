@@ -59,7 +59,16 @@ The OR operator, represented by |, provides flexibility in matching alternative 
 With the multiline flag added, the regex pattern now ensures that "John Doe" followed by a valid phone number is matched at the beginning of each line within the input text, facilitating accurate extraction of desired information from multiline data sources.
 
 ### Character Escapes
+- \(\d{3}\)\s\d{3}-\d{4}: Character Escapes, Quantifiers - Matches phone numbers in the format (123) 456-7890.
+- (/^John\sDoe\s(?:\(\d{3}\)\s\d{3}-\d{4}|\d{3}-\d{3}-\d{4})$/m)
 
+Character escapes in regular expressions are used to match specific characters or sequences of characters that have special meanings in regex syntax. In the provided regular expression, the backslash \ is used for character escapes.
+
+Here's how character escapes are used in the regex pattern:
+
+\( and \) are used to escape the opening and closing parentheses, respectively. In regular expressions, parentheses are metacharacters with special meanings (used for grouping and capturing). By escaping them with a backslash, \( and \) match the literal opening and closing parentheses in the input text.
+Similarly, \d is a character escape representing any digit (equivalent to the character class [0-9]). It matches numerical digits in the input text. In the regex pattern, \d{3} is used to match exactly three digits, ensuring accurate matching of the area code in the phone number.
+\s is another character escape representing any whitespace character (space, tab, newline). It matches whitespace characters in the input text. In the regex pattern, \s is used to match the whitespace between the name components "John" and "Doe", ensuring flexibility in handling variations in whitespace.
 ## Author
 
 A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
