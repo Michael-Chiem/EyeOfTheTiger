@@ -1,4 +1,5 @@
-# Regex Pattern for Matching 'John Doe' with Phone Number Variants
+# Regex Pattern for Matching 'John Doe' with Phone Number Variants 
+# (/^John\sDoe\s(?:\(\d{3}\)\s\d{3}-\d{4}|\d{3}-\d{3}-\d{4})$/m)
 
 In many data processing tasks, extracting specific information from unstructured text is a common challenge. Regular expressions (regex) provide a powerful tool for precisely defining patterns within text data, enabling efficient extraction of desired information. The provided regex pattern is designed to identify instances of the name "John Doe" along with associated phone numbers, accounting for variations in phone number formats. By leveraging anchors, quantifiers, character classes, grouping constructs, and the OR operator, this regex pattern ensures robust matching of diverse text patterns commonly encountered in datasets.
 
