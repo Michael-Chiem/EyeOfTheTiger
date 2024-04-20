@@ -26,6 +26,7 @@ This regex pattern begins by anchoring the search at the start and end of each l
 - "^: Anchor - Start of the line anchor" 
 - "$: Anchor - End of the line anchor"
 - /<span style="color:red;">^</span>John\sDoe\s(?:\(\d{3}\)\s\d{3}-\d{4}|\d{3}-\d{3}-\d{4})<span style="color:red;">$</span>/m
+- In the context of regular expressions, the forward slash / is used as a delimiter to indicate the beginning and end of a regex pattern. It's a common convention in many programming languages, including JavaScript, Perl, and Ruby, among others.
 
 Anchors in regular expressions are used to specify positions in the input string. In this regex, the caret <span style="color:red;">^</span> is an anchor that asserts the start of the line. It ensures that the pattern "John Doe" must occur at the beginning of a line. Similarly, the dollar sign <span style="color:red;">$</span> is another anchor used at the end of the regex, asserting the end of the line. It ensures that the phone number pattern must occur at the end of the line. Anchors are crucial for enforcing specific positions within the input text, providing context for where matches should occur.
 
@@ -42,6 +43,10 @@ Quantifiers specify the number of occurrences of the preceding element in the re
  Grouping constructs, denoted by parentheses (...), are used to group elements of a regular expression together. In this regex, (?: ... ) is a non-capturing group, used to group alternative phone number patterns without capturing the match. This ensures that the entire phone number pattern is treated as a single unit for the OR operator. Grouping constructs are essential for organizing complex regex patterns, improving readability, and applying operators to multiple elements simultaneously.
 
 ### Bracket Expressions
+
+ - Although not used in this specific regular expression, bracket expressions, also known as character classes, allow matching of any one of a set of characters. For example, [abc] would match either "a", "b", or "c". Bracket expressions provide a way to specify a range of characters or a set of characters that could match at a certain position in the text. They add versatility to regular expressions by allowing for pattern matching with a variety of character possibilities.
+
+ - In this example, [abc] is a bracket expression that matches any one character that is either "a", "b", or "c". So, if this regular expression is applied to the input text, it will match any occurrence of "a", "b", or "c" individually.
 
 ### Character Classes
 - John\sDoe: Character Classes - Literal characters "John" followed by whitespace \s and then "Doe".
