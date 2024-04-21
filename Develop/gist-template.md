@@ -81,4 +81,8 @@ Similarly, \d is a character escape representing any digit (equivalent to the ch
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+I developed a robust regular expression pattern tailored to identify instances of the name 'John Doe' along with associated phone numbers in unstructured text data. This regular expression incorporates a combination of anchors, quantifiers, character classes, grouping constructs, and the OR operator to ensure accurate and flexible matching of diverse text patterns commonly encountered in datasets. By leveraging these components effectively, our regex pattern serves as a valuable tool for efficiently extracting 'John Doe' entries along with their associated phone numbers, facilitating data processing and analysis tasks.
+
+Here is my repository link to my work: [git@github.com:Michael-Chiem/EyeOfTheTiger.git](https://github.com/Michael-Chiem/EyeOfTheTiger)
+
+This is the link to the website: 

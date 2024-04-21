@@ -1,52 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Regex Pattern for Matching 'John Doe' with Phone Number Variants</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Pattern for Matching 'John Doe' with Phone Number Variants</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Regex Pattern for Matching 'John Doe' with Phone Number Variants</h1>
+        <h1><span style="color:greenyellow;">(/^John\sDoe\s(?:\(\d{3}\)\s\d{3}-\d{4}|\d{3}-\d{3}-\d{4})$/m)</span></h1>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Introduction</h2>
+            <p>In many data processing tasks, extracting specific information from unstructured text is a common challenge. Regular expressions (regex) provide a powerful tool for precisely defining patterns within text data, enabling efficient extraction of desired information. The provided regex pattern is designed to identify instances of the name "John Doe" along with associated phone numbers, accounting for variations in phone number formats. By leveraging anchors, quantifiers, character classes, grouping constructs, and the OR operator, this regex pattern ensures robust matching of diverse text patterns commonly encountered in datasets.</p>
+        </section>
 
-<h1>Regex Pattern for Matching 'John Doe' with Phone Number Variants</h1>
+        <section>
+            <h2>Summary</h2>
+            <p>In summary, the provided regular expression pattern is tailored to identify occurrences of the name "John Doe" along with associated phone numbers in unstructured text data. It incorporates a combination of anchors, quantifiers, character classes, grouping constructs, and the OR operator to ensure accurate and robust matching of diverse text patterns commonly encountered in datasets. Anchors are used to specify the start and end of each line, ensuring precise detection of the target name and phone number combination. Character classes facilitate matching of specific types of characters, such as digits for the phone number and whitespace for separating name components. Additionally, the OR operator allows for handling alternative phone number formats, enhancing the regex pattern's versatility. By leveraging these components effectively, the regex pattern serves as a valuable tool for efficiently extracting "John Doe" entries along with their associated phone numbers from unstructured text data, thereby facilitating data processing and analysis tasks.</p>
+        </section>
+        
+        <section>
+            <h2>Regex Components Table of Contents</h2>
+            <!-- Add table of contents here -->
+            <ul>
+                <li><a href="#anchors">Anchors</a></li>
+                <li><a href="#quantifiers">Quantifiers</a></li>
+                <li><a href="#grouping-constructs">Grouping Constructs</a></li>
+                <li><a href="#bracket-expressions">Bracket Expressions</a></li>
+                <li><a href="#character-classes">Character Classes</a></li>
+                <li><a href="#the-or-operator">The OR Operator</a></li>
+                <li><a href="#flags">Flags</a></li>
+                <li><a href="#character-escapes">Character Escapes</a></li>
+            </ul>
+        </section>
 
-<p>In many data processing tasks, extracting specific information from unstructured text is a common challenge. Regular expressions (regex) provide a powerful tool for precisely defining patterns within text data, enabling efficient extraction of desired information. The provided regex pattern is designed to identify instances of the name "John Doe" along with associated phone numbers, accounting for variations in phone number formats. By leveraging anchors, quantifiers, character classes, grouping constructs, and the OR operator, this regex pattern ensures robust matching of diverse text patterns commonly encountered in datasets.</p>
+        <section id="anchors">
+            <h2>Anchors</h2>
+            <li>/<span style="color:red;">^</span>John\sDoe\s(?:\(\d{3}\)\s\d{3}-\d{4}|\d{3}-\d{3}-\d{4})<span style="color:red;">$</span>/m</li>
+            <li>^: Anchor - Start of the line anchor</li>
+            <li>$: Anchor - End of the line anchor</li>
+            <p>In the context of regular expressions, the forward slash / is used as a delimiter to indicate the beginning and end of a regex pattern. It's a common convention in many programming languages, including JavaScript, Perl, and Ruby, among others.</p>
+            <p>Anchors in regular expressions are used to specify positions in the input string. In this regex, the caret <span style="color:red;">^</span> is an anchor that asserts the start of the line. It ensures that the pattern "John Doe" must occur at the beginning of a line. Similarly, the dollar sign <span style="color:red;">$</span> is another anchor used at the end of the regex, asserting the end of the line. It ensures that the phone number pattern must occur at the end of the line. Anchors are crucial for enforcing specific positions within the input text, providing context for where matches should occur.</p>
+          </section>
 
-<p>This regex pattern begins by anchoring the search at the start and end of each line to ensure accurate detection of the target name and phone number combination. It then employs character classes to match specific types of characters, such as digits for the phone number and whitespace for separating name components. Additionally, the use of quantifiers enables precise matching of the required number of digits in the phone number, ensuring validity. Through careful construction and consideration of various text patterns, this regex pattern serves as a valuable tool for efficiently extracting "John Doe" entries along with their associated phone numbers from unstructured text data.</p>
+        <section id="quantifiers">
+            <h2>Quantifiers</h2>
+            <p>Explanation of quantifiers goes here...</p>
+        </section>
 
-<h2>Summary</h2>
-<p>In summary, the provided regular expression pattern is tailored to identify occurrences of the name "John Doe" along with associated phone numbers in unstructured text data. It incorporates a combination of anchors, quantifiers, character classes, grouping constructs, and the OR operator to ensure accurate and robust matching of diverse text patterns commonly encountered in datasets. Anchors are used to specify the start and end of each line, ensuring precise detection of the target name and phone number combination. Character classes facilitate matching of specific types of characters, such as digits for the phone number and whitespace for separating name components. Additionally, the OR operator allows for handling alternative phone number formats, enhancing the regex pattern's versatility. By leveraging these components effectively, the regex pattern serves as a valuable tool for efficiently extracting "John Doe" entries along with their associated phone numbers from unstructured text data, thereby facilitating data processing and analysis tasks.</p>
+        <section id="grouping-constructs">
+            <h2>Grouping Constructs</h2>
+            <p>Explanation of grouping constructs goes here...</p>
+        </section>
 
-<h2>Table of Contents</h2>
-<ul>
-  <li>Anchors</li>
-  <li>Quantifiers</li>
-  <li>Grouping Constructs</li>
-  <li>Bracket Expressions</li>
-  <li>Character Classes</li>
-  <li>The OR Operator</li>
-  <li>Flags</li>
-  <li>Character Escapes</li>
-  <li>Regex Components</li>
-</ul>
+        <section id="bracket-expressions">
+            <h2>Bracket Expressions</h2>
+            <p>Explanation of bracket expressions goes here...</p>
+        </section>
 
-<h3>Anchors</h3>
-<ul>
-  <li><code>^</code>: Anchor - Start of the line anchor</li>
-  <li><code>$</code>: Anchor - End of the line anchor</li>
-</ul>
+        <section id="character-classes">
+            <h2>Character Classes</h2>
+            <p>Explanation of character classes goes here...</p>
+        </section>
 
-<p>Anchors in regular expressions are used to specify positions in the input string. In this regex, the caret <code>^</code> is an anchor that asserts the start of the line. It ensures that the pattern "John Doe" must occur at the beginning of a line. Similarly, the dollar sign <code>$</code> is another anchor used at the end of the regex, asserting the end of the line. It ensures that the phone number pattern must occur at the end of the line. Anchors are crucial for enforcing specific positions within the input text, providing context for where matches should occur.</p>
+        <section id="the-or-operator">
+            <h2>The OR Operator</h2>
+            <p>Explanation of the OR operator goes here...</p>
+        </section>
 
-<h3>Quantifiers</h3>
-<h3>Grouping Constructs</h3>
-<h3>Bracket Expressions</h3>
-<h3>Character Classes</h3>
-<h3>The OR Operator</h3>
-<h3>Flags</h3>
-<h3>Character Escapes</h3>
+        <section id="flags">
+            <h2>Flags</h2>
+            <p>Explanation of flags goes here...</p>
+        </section>
 
-<h2>Author</h2>
-<p>A short section about the author with a link to the author's GitHub profile (<a href="#">replace with your information and a link to your profile</a>)</p>
+        <section id="character-escapes">
+            <h2>Character Escapes</h2>
+            <p>Explanation of character escapes goes here...</p>
+        </section>
+    </main>
 
+    <footer>
+        <p>Author: [Your Name]</p>
+        <p>Repository Link: <a href="https://github.com/Michael-Chiem/EyeOfTheTiger">git@github.com:Michael-Chiem/EyeOfTheTiger.git</a></p>
+    </footer>
 </body>
 </html>
