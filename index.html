@@ -91,12 +91,16 @@
 
         <section id="quantifiers">
             <h2>Quantifiers</h2>
-            <p>Explanation of quantifiers goes here...</p>
+            <li>(/^John\sDoe\s(?:\<span style="color:red;">(\d{3}\)\s\d{3}</span>-<span style="color:red;">\d{4}|\d{3}</span>-<span style="color:red;">\d{3}-\d{4})</span>$/m)</li>
+            <li><span style="color:red;">\d{3}-\d{3}-\d{4}</span>: Quantifiers - Matches phone numbers in the format 123-456-7890.</li>
+            <p>Quantifiers specify the number of occurrences of the preceding element in the regex pattern. In this expression, quantifiers are used to specify the exact number of digits expected in the phone number: \d{3} for three digits and \d{4} for four digits. These quantifiers ensure that the area code and phone number parts have the correct length. Quantifiers help make regular expressions more flexible and concise by allowing repetition of patterns without needing to specify each character individually.</p>
         </section>
 
         <section id="grouping-constructs">
             <h2>Grouping Constructs</h2>
-            <p>Explanation of grouping constructs goes here...</p>
+            <li>(/^John\sDoe\s<span style="color:red;">(?:\(\d{3}\)</span>\s\d{3}-\d{4}|\d{3}-\d{3}-\d{4})$/m)</li>
+            <li>(?: ... ): Grouping Constructs - Non-capturing group for the phone number pattern.</li>
+            <p>Grouping constructs, denoted by parentheses (...), are used to group elements of a regular expression together. In this regex, (?: ... ) is a non-capturing group, used to group alternative phone number patterns without capturing the match. This ensures that the entire phone number pattern is treated as a single unit for the OR operator. Grouping constructs are essential for organizing complex regex patterns, improving readability, and applying operators to multiple elements simultaneously.</p>
         </section>
 
         <section id="bracket-expressions">
