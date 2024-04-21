@@ -34,3 +34,4 @@ Visit this website: https://regexr.com/
 For any questions regarding the project, contact michaelchiem@hotmail.com.
 
 [Project Link](https://github.com/Michael-Chiem/EyeOfTheTiger)
+[Website Link](https://michael-chiem.github.io/EyeOfTheTiger/)
