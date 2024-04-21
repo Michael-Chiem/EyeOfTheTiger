@@ -86,6 +86,7 @@
                 <li><a href="#the-or-operator">The OR Operator</a></li>
                 <li><a href="#flags">Flags</a></li>
                 <li><a href="#character-escapes">Character Escapes</a></li>
+                <li><a href="#author">Author</a></li>
             </ul>
         </section>
 
@@ -120,14 +121,14 @@
 
         <section id="character-classes">
             <h2>Character Classes</h2>
-            <li>(/^John\sDoe\s(?:\(\d{3}\)\s\d{3}-\d{4}<span style="color:red;">|</span>\d{3}-\d{3}-\d{4})$/m)</li>
+            <li>(/^John\sDoe\s(?:\(\d{3}\)\s\d{3}-\d{4}|\d{3}-\d{3}-\d{4})$/m)</li>
             <li>John\sDoe: Character Classes - Literal characters "John" followed by whitespace \s and then "Doe".</li>
             <p>Character classes, denoted by \, represent sets of characters that can match at a particular position in the text. In this regex, \d represents any digit (equivalent to [0-9]), matching numerical digits in the input text. It's crucial for matching the numerical parts of the phone number. Similarly, \s represents any whitespace character (space, tab, newline), enabling matching of spaces between the name components "John" and "Doe". By using character classes, the regex becomes more versatile, allowing for precise matching of specific types of characters at designated positions within the text.</p>
         </section>
 
         <section id="the-or-operator">
             <h2>The OR Operator</h2>
-            <li>(/^John\sDoe\s(?:\(\d{3}\)\s\d{3}-\d{4}|\d{3}-\d{3}-\d{4})$/m)</li>
+            <li>(/^John\sDoe\s(?:\(\d{3}\)\s\d{3}-\d{4}<span style="color:red;">|</span>\d{3}-\d{3}-\d{4})$/m)</li>
             <li>|: OR Operator - Separates alternative patterns within the non-capturing group.</li>
             <p>The OR operator, represented by |, provides flexibility in matching alternative patterns within the regex. In this expression, the OR operator separates two alternative phone number patterns within the non-capturing group. One pattern matches phone numbers in the format (123) 456-7890, while the other matches numbers in the format 123-456-7890. The OR operator expands the regex's capability to handle different phone number formats, accommodating variations in the input text. By incorporating the OR operator, the regex becomes more adaptable, capable of capturing diverse phone number patterns encountered in real-world data.</p>
         </section>
@@ -150,7 +151,7 @@
               \s is another character escape representing any whitespace character (space, tab, newline). It matches whitespace characters in the input text. In the regex pattern, \s is used to match the whitespace between the name components "John" and "Doe", ensuring flexibility in handling variations in whitespace.</p>
           </section>
 
-        <section>
+        <section id="author">
           <h2>Author</h2>
           <p>I developed a robust regular expression pattern tailored to identify instances of the name 'John Doe' along with associated phone numbers in unstructured text data. This regular expression incorporates a combination of anchors, quantifiers, character classes, grouping constructs, and the OR operator to ensure accurate and flexible matching of diverse text patterns commonly encountered in datasets. By leveraging these components effectively, our regex pattern serves as a valuable tool for efficiently extracting 'John Doe' entries along with their associated phone numbers, facilitating data processing and analysis tasks.</p>
         </section>  
