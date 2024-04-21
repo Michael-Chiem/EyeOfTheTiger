@@ -120,7 +120,7 @@
 
         <section id="character-classes">
             <h2>Character Classes</h2>
-            <li>(/^John\sDoe\s(?:\(\d{3}\)\s\d{3}-\d{4}|\d{3}-\d{3}-\d{4})$/m)</li>
+            <li>(/^John\sDoe\s(?:\(\d{3}\)\s\d{3}-\d{4}<span style="color:red;">|</span>\d{3}-\d{3}-\d{4})$/m)</li>
             <li>John\sDoe: Character Classes - Literal characters "John" followed by whitespace \s and then "Doe".</li>
             <p>Character classes, denoted by \, represent sets of characters that can match at a particular position in the text. In this regex, \d represents any digit (equivalent to [0-9]), matching numerical digits in the input text. It's crucial for matching the numerical parts of the phone number. Similarly, \s represents any whitespace character (space, tab, newline), enabling matching of spaces between the name components "John" and "Doe". By using character classes, the regex becomes more versatile, allowing for precise matching of specific types of characters at designated positions within the text.</p>
         </section>
@@ -141,8 +141,19 @@
 
         <section id="character-escapes">
             <h2>Character Escapes</h2>
-            <p>Explanation of character escapes goes here...</p>
-        </section>
+            <li>(/^John\sDoe\s(?:\(\d{3}\)\s\d{3}-\d{4}|\d{3}-\d{3}-\d{4})$/m)</li>
+            <li>\(\d{3}\)\s\d{3}-\d{4}: Character Escapes, Quantifiers - Matches phone numbers in the format (123) 456-7890.</li>
+            <p>Character escapes in regular expressions are used to match specific characters or sequences of characters that have special meanings in regex syntax. In the provided regular expression, the backslash \ is used for character escapes.</p>
+            <p>Here's how character escapes are used in the regex pattern:</p>
+            <p>\( and \) are used to escape the opening and closing parentheses, respectively. In regular expressions, parentheses are metacharacters with special meanings (used for grouping and capturing). By escaping them with a backslash, \( and \) match the literal opening and closing parentheses in the input text.
+              Similarly, \d is a character escape representing any digit (equivalent to the character class [0-9]). It matches numerical digits in the input text. In the regex pattern, \d{3} is used to match exactly three digits, ensuring accurate matching of the area code in the phone number.
+              \s is another character escape representing any whitespace character (space, tab, newline). It matches whitespace characters in the input text. In the regex pattern, \s is used to match the whitespace between the name components "John" and "Doe", ensuring flexibility in handling variations in whitespace.</p>
+          </section>
+
+        <section>
+          <h2>Author</h2>
+          <p>I developed a robust regular expression pattern tailored to identify instances of the name 'John Doe' along with associated phone numbers in unstructured text data. This regular expression incorporates a combination of anchors, quantifiers, character classes, grouping constructs, and the OR operator to ensure accurate and flexible matching of diverse text patterns commonly encountered in datasets. By leveraging these components effectively, our regex pattern serves as a valuable tool for efficiently extracting 'John Doe' entries along with their associated phone numbers, facilitating data processing and analysis tasks.</p>
+        </section>  
     </main>
 
     <footer>
